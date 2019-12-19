@@ -1,0 +1,86 @@
+ion-header {
+  .title {
+    text-align: center;
+    font-family: 'tofini_bold';
+    font-size: 1rem;
+    position: absolute;
+    left: 30%;
+    margin: 0 auto;
+    color:white;
+  }
+  ion-toolbar{
+    --background: rgb(2, 2, 2);
+  }
+  ion-button {
+    --background: var(--ion-color-black);;
+      color:black;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --ripple-color: var(--ion-color-white);
+    margin-left: 15px;
+    ion-icon {
+      color: black;
+      width: 23.74px;
+      height: 20px;
+    }
+  }
+}
+ion-content {
+  --background: var(--ion-color-white);;
+  --padding-end: 24px;
+  --padding-start: 24px;
+  --padding-top: 24px;
+  ion-input,
+  .date_picker {
+    --background: var(--ion-input-back);
+    height: 44px;
+    border-radius: 22px;
+    --padding-start: 24px;
+    --padding-top: 16px;
+    --padding-bottom: 13px;
+    font-family: 'tofini_regular';
+    font-size: 15px;
+    margin-bottom: 20px;
+    --placeholder-color: var(--ion-placeholder-color);
+  }
+  ion-datetime {
+    background: var(--ion-input-back);
+    font-size: 15px;
+    --padding-top: 13px;
+    font-family: 'tofini_regular';
+    --placeholder-color: var(--ion-placeholder-color);
+  }
+  .btn-SignUp {
+   --color: var(--ion-color-white); 
+   height: 44px;
+    margin: 42px 8px 0px 8px;
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: 'tofini_regular';
+    --background: var(--ion-color-gradiant1);
+    margin-top: 40px;
+    text-transform: inherit;
+  }
+  .terms-text {
+    font-size: 11px;
+    color: var(--ion-color-gray);
+    font-family: 'tofini_regular';
+    margin: 16px 0px 0px 0px;
+    .light-text {
+      color: var(--ion-color-blue);
+      font-family: 'tofini_medium';
+    }
+  }
+  .account-text {
+    margin-top: 42px;
+    font-family: 'tofini_regular';
+    color: var(--ion-color-blue);
+    font-size: 14px;
+    a {
+      color: var(--ion-color-blue);
+    }
+  }
+  .btn_white{
+    --color: var(--ion-color-white); 
+  }
+}

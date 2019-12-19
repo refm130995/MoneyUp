@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button fill="clear" mode="md" (click)="backPage()">
+          <ion-icon src="../../../assets/images/General/noun_Arrow_1256499.svg"></ion-icon>
+        </ion-button>
+          <h2 class="title">Registro da conta</h2>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="myForm" (ngSubmit)="signIn()" >
+      <ion-input formControlName="name"  name= "name" placeholder="Nome" type="text">
+      </ion-input>
+  
+      <ion-input formControlName="email"  placeholder="Endereço de e-mail" name="email"  type="email"></ion-input>
+      <ion-label class="ion-text-center" color="danger" *ngIf="(myForm.get('email').errors && myForm.get('email').dirty) && myForm.get('email').hasError('required')">Este campo es requerido</ion-label>
+      <ion-label  class="ion-text-center" color="danger" *ngIf="myForm.get('email').hasError('email')">El correo electrónico  no es valido</ion-label>
+      <ion-input formControlName="phone"  placeholder="Phone number" name="phone" type="tel"></ion-input>
+  
+      <ion-datetime formControlName="date_picker"  class="date_picker" name="date_picker" placeholder="Data de nascimento" displayFormat="DD-MM-YYYY"></ion-datetime>
+  
+      <ion-input formControlName="password"  placeholder="Senha" name="password" type="password"></ion-input>
+      <ion-label class="ion-text-center" color="danger" *ngIf="(myForm.get('password').errors && myForm.get('password').dirty) && myForm.get('password').hasError('required')">Este campo es requerido</ion-label>
+      <ion-input formControlName="Cpassword" placeholder="Confirm password" name="Cpassword" type="password"></ion-input>
+      <ion-label class="ion-text-center" color="danger" *ngIf="(myForm.value.Cpassword != myForm.value.password && myForm.value.Cpassword)" >Las contraseñas deben de coincidir</ion-label>
+  
+      <ion-button  [disabled]= "!myForm.valid || myForm.value.Cpassword != myForm.value.password" class="btn-SignUp" mode="md" expand="full" shape="round" fill="solid" (click)="signIn()">
+          Inscreva-se
+      </ion-button>
+    </form>
+    <p class="terms-text ion-text-center">al presionar <span class="light-text">Inscreva-se </span> você aceita o seguinte
+      <br> <span class="light-text">Eu termino e
+          Condições</span>
+          sem reserva
+    </p>
+    <p class="ion-text-center account-text">¿Você já tem uma conta? <a (click)="goToSignIn()"> Entrar</a></p>
+  </ion-content>

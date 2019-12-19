@@ -1,0 +1,101 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.enableLocation-modal {
+  --height: 340px;
+  --max-height: 340px;
+  padding: 0px 20px;
+  --border-radius: 24px;
+  --background: #04040f;
+  .modal-wrapper {
+    transform: translateY(39px) !important;
+  }
+}
+.code-modal {
+  --height: 381px;
+  --max-height: 395px;
+  padding: 0px 20px;
+  --border-radius: 24px;
+  --background: #04040f;
+}
+.segment-button-indicator {
+  width: 120px !important;
+}
+.success-modal {
+  --height: 400px;
+  --max-height: 395px;
+  padding: 0px 20px;
+  --border-radius: 24px;
+  --background: #04040f;
+}
+
+.nearSalon-modal {
+  --height: 63vh;
+  --border-radius: 17px 17px 0px 0px;
+  --background: #04040f;
+  .modal-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.shareModal {
+  --height: 46vh;
+  --border-radius: 17px 17px 0px 0px;
+  --background: #04040f;
+  .modal-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.my-modal {
+  .modal-wrapper {
+    --background: transparent;
+  }
+}
+.ng-select.country-codeSelect .ng-select-container {
+  background-color: transparent;
+  border: 0px !important;
+  height: 30px;
+  min-height: 30px;
+  font-family: "tofini_regular";
+  font-size: 15px;
+}
+.ng-select .ng-arrow-wrapper .ng-arrow {
+  border-color: black transparent transparent;
+  border-width: 6px 5px 2.5px;
+}
+.ng-select.ng-valid.ng-touched .ng-select-container {
+  box-shadow: none !important;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 130px !important;
+}
+.swiper-pagination-bullet-active {
+  width: 33px !important;
+  border-radius: 7px !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet {
+  opacity: 0.6;
+}
+
+:root {
+  ion-tab-button.tab-selected {
+    ion-icon,
+    ion-label {
+      color: var(--ion-color-blue) !important;
+      --ion-color-base: var(--ion-color-blue) !important;
+    }
+  }
+}

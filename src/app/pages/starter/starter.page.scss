@@ -1,0 +1,73 @@
+ion-content {
+  --background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiLs4_KUm97jwHy38Ods-5BYDQ-mwW12AAFxG1NrvMG3LD6axY&s) top/cover fixed; //no-repeat;
+ // --background: url('http://placehold.it/360x640') top/cover fixed;
+  .main-container {
+    height: 100%;
+    width: 100%;
+    padding: 0px 32px 0px 31px;
+    background: linear-gradient(180deg, transparent 25%, #000000 130%);
+    .bottom-container {
+      bottom: 0px;
+      position: absolute;
+      right: 32px;
+      left: 31px;
+
+      .logo-section {
+        margin: 0 auto;
+        height: 150px;
+        width: 200px;
+        border-radius: 17px;
+        padding: 30px 20px;
+        display: block;
+      //  background-image: var(--ion-color-right-bottom-gradiant);
+        img {
+          width: 200px;
+          height: 150px;
+        }
+      }
+      .title {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-family: 'tofini_bold';
+        height: 65px;
+        font-size: 23px;
+        text-align: center;
+        color: var(--ion-color-white);
+      }
+      .btn-social-login {
+        --color: var(--ion-color-white);
+        height: 44px;
+        margin: 0px;
+        font-size: 15px;
+        --box-shadow: none;
+        text-transform: inherit;
+        img {
+          position: absolute;
+          left: 26px;
+        }
+      }
+      .google {
+        --background: var(--ion-color-gradiant1);
+     // --background: brown;
+        margin-top: 40px;
+      }
+      .facebook {
+        --background: var(--ion-color-gradiant);
+     //   --background: brown;
+        margin-top: 24px;
+        img {
+          left: 29px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin: 40px 0px 58px 0px;
+        color: var(--ion-color-white);
+        .btn-signIn {
+          color: var(--ion-color-orange);
+          font-family: 'tofini_medium';
+        }
+      }
+    }
+  }
+}

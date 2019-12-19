@@ -1,0 +1,26 @@
+<ion-content>
+    <div class="logo-section">
+        <img src="https://via.placeholder.com/150x150" alt="">
+      </div>
+  <div class="content-section">
+    <h1 class="ion-text-center title">Bem-vindo</h1>
+    <p class="ion-text-center">Entre na sua conta</p>
+    <form [formGroup]="myForm" (ngSubmit)="signIn()">
+  <ion-item class="item">
+      <ion-input class="email-input" placeholder="Correo electronico" type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-label class="ion-text-center" color="danger" *ngIf="(myForm.get('email').errors && myForm.get('email').dirty) && myForm.get('email').hasError('required')">Este campo é obrigatório.</ion-label>
+    <ion-label  class="ion-text-center" color="danger" *ngIf="myForm.get('email').hasError('email')">O email não é válido</ion-label>
+        <ion-item>
+      <ion-input class="email-input" placeholder="Contraseña" type="password" formControlName="password"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="(myForm.get('password').errors && myForm.get('password').dirty) && myForm.get('password').hasError('required')"></ion-label>
+        <ion-button  class="boton" [disabled]= "!myForm.valid" mode="ios" shape="round" fill="solid"Expand="full" type="submit" >Iniciar sessão</ion-button>
+  <ion-button class="btn-forgot" expand="full" fill="clear" (click)="forgotPassword()">
+      ¿Esqueceu sua senha?
+    </ion-button>  
+    <p class="ion-text-center account-text">¿Não possui uma conta? <a (click)="signUp()"> Registrar</a></p>  
+</form>
+    </div>
+</ion-content>
+

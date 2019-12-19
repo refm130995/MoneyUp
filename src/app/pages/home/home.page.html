@@ -1,0 +1,54 @@
+<!-- <ion-header no-border>
+  <ion-toolbar>
+    <p class="location-label">Your location</p>
+    <p class="select-location ion-no-margin">
+      <ion-icon class="pin" src="../../../assets/images/General/ic_location_color.svg"></ion-icon>
+      San Francisco City
+      <ion-icon class="direction" src="../../../assets/images/General/ic_direction.svg"></ion-icon>
+    </p>
+    <ion-buttons slot="end">
+      <ion-button class="btn-filter" fill="clear" (click)="openFilter()">
+        <ion-icon src="../../../assets/images/General/_ionicons_svg_ios-funnel.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar mode="ios" [(ngModel)]="searchText"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" class="btn-cancel" (click)="searchCancel()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div #map id="map" style="height: 100%;width: 100%"></div>
+  <div class="map-button">
+    <div class="info-icon">
+      <ion-icon src="../../../assets/images/near-by/ic_info.svg"></ion-icon>
+    </div>
+    <ion-icon class="location" src="../../../assets/images/near-by/ic_location_clear.svg"></ion-icon>
+  </div>
+  <ion-row class="salonList-row" nowrap>
+    <ion-col size="6" size-md="2" size-xl="4" *ngFor="let salon of salonList" (click)="salonDetail($event)">
+      <div class="salon-section">
+        <div class="salon-image">
+          <img class="salon-img" [src]="salon.image" alt="" />
+        </div>
+        <div class="salon-detail">
+          <h5 class="salon-name">
+            {{ salon.name }}
+            <span class="start-span ion-float-right"><img src="../../../assets/images/General/ic_star.svg" alt="" />{{
+                salon.price
+              }} $</span>
+          </h5>
+          <p class="salon-address"><!-- {{ salon.duration }} --></p>
+          <ion-button class="btn-book ion-float-right" mode="md" size="small" (click)="bookSalon($event)">
+            Reservar
+          </ion-button>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
